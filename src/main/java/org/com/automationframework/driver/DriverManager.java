@@ -9,7 +9,11 @@ import org.testng.annotations.Test;
 
 public class DriverManager {
 
-    static WebDriver driver;
+    public static WebDriver driver;
+
+    public static WebDriver getDriver(){
+        return driver;
+    }
 
     @BeforeMethod
     static void init(){
