@@ -6,13 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.com.automationframework.basetest.CommonToAllTest;
 
-public class TestVWOLogin {
+public class TestVWOLogin extends CommonToAllTest {
 
     @Test
-    public void login() throws InterruptedException {
+    public void loginNegative() throws InterruptedException {
         LoginPage_POM loginPagePom = new LoginPage_POM();
-        String errortextmsg = loginPagePom.loginNegative();
+        loginPagePom.openVWOLoginURL();
+        String errortextmsg = loginPagePom.loginToVWOInvalidCreds();
         Assert.assertEquals(errortextmsg,"Your email, password, IP address or location did not match");
 
     }

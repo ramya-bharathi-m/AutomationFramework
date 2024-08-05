@@ -3,7 +3,7 @@ package org.com.automationframework.pages.PageObjectModel;
 import org.openqa.selenium.By;
 
 public class DashBoardPage_POM {
-    DashBoardPage_POM(){
+    public DashBoardPage_POM(){
 
     }
 
